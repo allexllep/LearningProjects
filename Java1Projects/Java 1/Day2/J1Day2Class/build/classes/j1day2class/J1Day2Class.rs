@@ -1,0 +1,2 @@
+j1day2class.Test
+j1day2class.J1Day2Class

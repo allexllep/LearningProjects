@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane id="GridPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapp.GridPaneController" fx:id="root" prefHeight="550.0" prefWidth="550.0" alignment="CENTER" hgap="10" vgap="10">
+        <padding>
+            <javafx.geometry.Insets top="25" right="25" bottom="25" left="25"/>
+        </padding>
+        <Text  text= "File finder" style="-fx-font: NORMAL 20 Tahoma;" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" GridPane.rowSpan="1"/>
+        <Label text="Input path:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="pathId" GridPane.columnIndex="1" GridPane.rowIndex="1" text="C:\Program Files" /> 
+        <Label text="File ends with:" GridPane.columnIndex="0" GridPane.rowIndex="2"  />
+        <TextField fx:id="endId" GridPane.columnIndex="1" GridPane.rowIndex="2" text=".pdf" />
+        <Button text="Find" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#btnFindClick"  />
+    
+        <HBox  GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button text="Cancel" onAction="#btnCancelClik"/>
+            <ProgressBar fx:id="barId" minWidth="200" progress="0" translateX="100" />
+        </HBox>
+        <ListView fx:id="listId"   minWidth="500"     GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.rowSpan="1" >
+        </ListView> 
+    
+</GridPane>

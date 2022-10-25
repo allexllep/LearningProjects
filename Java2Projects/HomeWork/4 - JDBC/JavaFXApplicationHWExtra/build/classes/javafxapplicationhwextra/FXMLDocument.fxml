@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane id="GridPane" fx:id="root" prefHeight="550" prefWidth="550" alignment="CENTER" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplicationhwextra.FXMLDocumentController">
+    
+    
+    <padding>
+        <javafx.geometry.Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+    
+    <columnConstraints> 
+        <ColumnConstraints percentWidth="40" />
+        <ColumnConstraints percentWidth="30" />
+        <ColumnConstraints percentWidth="30" />
+    </columnConstraints>
+    
+    <Label fx:id="pathId" minWidth="300" 
+        GridPane.columnIndex="0" GridPane.rowIndex="0"
+        GridPane.columnSpan="2" GridPane.rowSpan="1"  />
+     
+    <HBox GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.halignment="RIGHT" minWidth="200"  >
+        <Button fx:id="btnSelect" text="Select" onAction="#btnSelectClick" />
+        <Button fx:id="btnUpload" text="Upload" onAction="#btnUploadClick" />
+    </HBox>
+
+    <TableView fx:id="listId" GridPane.columnIndex="0" GridPane.rowIndex="1" minWidth="200" /> 
+
+    <ImageView fx:id="imageView" preserveRatio="true" fitWidth="300" 
+        GridPane.columnIndex="1" GridPane.rowIndex="1"
+        GridPane.columnSpan="2" GridPane.rowSpan="1">      
+    </ImageView>
+</GridPane>
